@@ -18,7 +18,7 @@ def get_clip_box(image_a, image_b):
     x_min = tf.math.maximum(0, x - width // 2)
     y_min = tf.math.maximum(0, y - height // 2)
     x_max = tf.math.minimum(image_size_x, x + width // 2)
-    y_max = tf.math.minimum(image_size_y, y + width // 2)
+    y_max = tf.math.minimum(image_size_y, y + height // 2)
 
     return x_min, y_min, x_max, y_max
 
